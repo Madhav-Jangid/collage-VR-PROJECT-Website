@@ -60,3 +60,19 @@ function activeLink() {
 list.forEach((item) => {
     item.addEventListener('click', activeLink)
 });
+
+
+
+const menuBar = document.getElementById('checkbox');
+const shortNavMenu = document.getElementById('shortNavMenu');
+var menuFlag = true;
+menuBar.addEventListener('click',function(){
+    console.log('menu function')
+    if(menuFlag){
+        shortNavMenu.style.display = 'flex';
+    }else{
+        shortNavMenu.style.display = 'none';
+    }
+
+    menuFlag = !menuFlag;
+})

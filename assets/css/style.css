@@ -18,6 +18,7 @@ body {
     --red: #e31e24;
     --white: #ffffff;
     --yellowishWhite: #feffea;
+    --whiteMorph: rgba(255,255,255,.6)
 }
 
 
@@ -39,12 +40,17 @@ nav {
 }
 
 nav #logo{
-    /* width: 100%; */
+    width: 100%;
     height: 100%;
-    padding-left: 50px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+}
+
+#logo img{
+    margin: 0 40px 0 20px;
+    width: 30vw;
+    max-width: 250px;
 }
 
 nav ul {
@@ -123,6 +129,106 @@ nav ul ul ul li {
     text-decoration: none;
 }
 
+
+
+
+
+
+#menuBar {
+    display: none;
+    margin-right: 30px;
+}
+
+#shortNavMenu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    max-width: 250px;
+    height: calc(3rem * 5);
+    position: absolute;
+    top: 6rem;
+    right: 30px;
+    background-color: #fff;
+}
+
+#shortNavMenu a{
+    font-size: 17px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: all .2s;
+    text-decoration: none;
+}
+
+#shortNavMenu a:hover{
+    background-color: var(--red);
+    color: var(--white);
+    padding-left: 10px;
+}
+
+#checkbox {
+    display: none;
+  }
+  
+  .toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .5s;
+  }
+  
+  .bars {
+    width: 100%;
+    height: 4px;
+    background-color: var(--red);
+    border-radius: 4px;
+  }
+  
+  #bar2 {
+    transition-duration: .8s;
+  }
+  
+  #bar1,#bar3 {
+    width: 70%;
+  }
+  
+  #checkbox:checked + .toggle .bars {
+    position: absolute;
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+  }
+
 /*=====  End of Nav Bar  ======*/
 
 
@@ -143,11 +249,13 @@ nav ul ul ul li {
     margin-top: 6rem;
 }
 
-.mainCont #bgImage{
+#bgImage{
     position: absolute;
     width: 100%;
-    /* height: 100; */
-    object-fit: cover;
+    height: 110%;
+    /* object-fit: cover; */
+    background-position: 0 0;
+    background-size: cover;
     z-index: -100;
     filter: grayscale(.5) blur(1px);
 }
@@ -155,13 +263,18 @@ nav ul ul ul li {
 #mainLeftLogo{
     height: 450px;
     width: 450px;
-    background-color: #ffffffb4;
+    background-color: var(--whiteMorph);
     border: 1px solid var(--red);
     border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+}
+
+#mainLeftLogo img{
+    width: 60vw;
+    max-width: 350px;
 }
 
 #mainLeftLogo p{
@@ -214,7 +327,7 @@ nav ul ul ul li {
 }
 
 #card2 {
-    background-color: rgba(255, 255, 255, .7);
+    background-color: var(--whiteMorph);
     /* background: url('https://imgs.search.brave.com/t4ltToFyrmOnrMvV7rxNq4eMuyqMdESOe7LwYbLrl10/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOC8w/MS8xNC8yMy8xMi9u/YXR1cmUtMzA4Mjgz/Ml82NDAuanBn'); */
     background-position: center;
     background-size: cover;
@@ -222,7 +335,7 @@ nav ul ul ul li {
 }
 
 #card3 {
-    background-color: rgba(255, 255, 255, .7);
+    background-color: var(--whiteMorph);
     /* background: url('https://imgs.search.brave.com/xjyai8JcrgIz2M0hxVTMto2i7fneQ8fr_AoZ-tI2qMY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vcGljanVt/Ym8uY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy9iZWF1dGlmdWwt/Zm9nZ3ktYXV0dW1u/LW1vcm5pbmctbmF0/dXJlLXNjZW5lcnkt/ZnJlZS1waG90by5q/cGc_dz02MDAmcXVh/bGl0eT04MA'); */
     background-position: center;
     background-size: cover;
@@ -230,7 +343,7 @@ nav ul ul ul li {
 }
 
 #card4 {
-    background-color: rgba(255, 255, 255, .7);
+    background-color: var(--whiteMorph);
     /* background: url('https://imgs.search.brave.com/uutxfF7S8FW_CjPzphB32FZ3BKOlIbvcSzyS46FWTVI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxMy8x/MC8wMi8yMy8wMy9t/b3VudGFpbnMtMTkw/MDU1XzY0MC5qcGc'); */
     background-position: center;
     background-size: cover;
@@ -239,7 +352,7 @@ nav ul ul ul li {
 
 
 #card5 {
-    background-color: rgba(255, 255, 255, .7);
+    background-color: var(--whiteMorph);
     /* background: url('https://imgs.search.brave.com/eFPPHIk-q_rEeA3WMizmhZXAU6r1l-t51YlVHc5alCw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/NS8wNS8wMi8zNy9z/dW5zZXQtMTM3MzE3/MV82NDAuanBn'); */
     background-position: center;
     background-size: cover;
@@ -352,7 +465,8 @@ nav ul ul ul li {
     bottom: 0;
     width: 100%;
     height: 70px;
-    background-color: var(--white);
+    background-color: #e0e0e0;
+    /* background-color: var(--white); */
     color: #000;
     display: none;
     justify-content: center;
@@ -423,9 +537,8 @@ nav ul ul ul li {
     height: 70px;
     background: #f7341e;
     border-radius: 50%;
-    border: 6px solid rgba(64, 62, 62, 0.981);
+    border: 6px solid var(--white);
     transition: 0.5s;
-
 }
 
 .indicator::before{
@@ -437,7 +550,7 @@ nav ul ul ul li {
     height: 20px;
     background-color: transparent;
     border-top-right-radius: 20px;
-    box-shadow: 1px -10px 0 0 rgba(255, 255, 255, 0);
+    box-shadow: 1px -10px 0 0 var(--white);
 }
 
 .indicator::after{
@@ -449,7 +562,7 @@ nav ul ul ul li {
     height: 20px;
     background-color: transparent;
     border-top-left-radius: 20px;
-    box-shadow: -1px -10px 0 0 rgba(255, 255, 255, 0);
+    box-shadow: -1px -10px 0 0 var(--white);
 }
 
 
@@ -480,5 +593,13 @@ nav ul ul ul li {
 
     .navigatior{
         display: flex;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    #menuBar {
+        display: block;
     }
 }
