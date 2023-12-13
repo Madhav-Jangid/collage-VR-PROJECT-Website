@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR TOUR</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div id="logo">
+            <img src="assets\images\BFGI LOGO MAIN.png" alt="" height="100%" width="250px">
+            <ul>
+                <li><a href="https://www.babafaridgroup.edu.in/">Main Website</a></li>
+                <li>
+                    <a href="#">BFCE</a>
+                    <ul>
+                        <li class="dropMenuOption"><a href="#">Baba Farid College of Education</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">BFC</a>
+                    <ul>
+                        <li class="dropMenuOption"><a href="#">Baba Farid College</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">BFCET</a>
+                    <ul>
+                        <li class="dropMenuOption"><a href="#">Baba Farid College of Engineering and Technology</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">BFCMT</a>
+                    <ul>
+                        <li class="dropMenuOption"><a href="#">Baba Farid College of Management and Technology</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">BFSSS</a>
+                    <ul>
+                        <li class="dropMenuOption"><a href="#">Baba Farid Sen. Sec. School</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="mainCont">
+        <img src="assets/images/Background Image.jpg" alt="" id="bgImage">
+        <div id="mainLeftLogo">
+            <img src="assets\images\BFGI LOGO MAIN.png" alt="" width="350px">
+            <p>Founded in 1994, Baba Farid Group of Institutions (BFGI) is a prominent education hub in India under the
+                leadership of Dr. Gurmeet Singh Dhaliwal. Focused on academic excellence, BFGI collaborates with major
+                companies like Microsoft, Oracle, SAP, HP, HCL, Nokia, and affiliations with industrial bodies.
+                Emphasizing research, employability, and entrepreneurship, BFGI consistently excels in academics,
+                sports, and extracurriculars. This commitment to holistic education positions BFGI as a leader in
+                shaping student success.</p>
+        </div>
+
+        <div id="anotherCollegesRight">
+            <div onclick="DisplayCard('card1','d1','c1')" class="card" id="card1">
+                <div class="coverDiv" id="c1">
+                    <h1>BFCET</h1>
+                </div>
+                <div class="detailOfCard">
+                    <h2>BFCET</h2>
+                    <p>Explore the world of BFCET</p>
+                    <a href="">Explore in 360</a>
+                </div>
+                <div class="details" id="d1">
+                    <img src="assets/images/BFCET LOGO.png" alt="bfcet logo">
+                </div>
+            </div>
+
+            <div onclick="DisplayCard('card2','d2','c2')" class="card" id="card2">
+                <div class="coverDiv" id="c2">
+                    <h1>BFCE</h1>
+                </div>
+                <div class="detailOfCard">
+                    <h2>BFCE</h2>
+                    <p>Explore the world of BFCE</p>
+                    <a href="">Explore in 360</a>
+                </div>
+                <div class="details" id="d2">
+                    <img src="assets/images/BFCE LOGO.png" alt="bfce logo">
+                </div>
+            </div>
+
+            <div onclick="DisplayCard('card3','d3','c3')" class="card" id="card3">
+                <div class="coverDiv" id="c3">
+                    <h1>BFC</h1>
+                </div>
+                <div class="detailOfCard">
+                    <h2>BFC</h2>
+                    <p>Explore the world of BFC</p>
+                    <a href="">Explore in 360</a>
+                </div>
+                <div class="details" id="d3">
+                    <img src="assets/images/BFC LOGO.png" alt="bfc logo">
+                </div>
+            </div>
+
+            <div onclick="DisplayCard('card4','d4','c4')" class="card" id="card4">
+                <div class="coverDiv" id="c4">
+                    <h1>BFCMT</h1>
+                </div>
+                <div class="detailOfCard">
+                    <h2>BFCMT</h2>
+                    <p>Explore the world of BFCMT</p>
+                    <a href="">Explore in 360</a>
+                </div>
+                <div class="details" id="d4">
+                    <img src="assets/images/BFCMT LOGO.png" alt="bfcmt logo">
+                </div>
+            </div>
+
+            <div onclick="DisplayCard('card5','d5', 'c5')" class="card" id="card5">
+                <div class="coverDiv" id="c5">
+                    <h1>BFSSS</h1>
+                </div>
+                <div class="detailOfCard">
+                    <h2>BFSSS</h2>
+                    <p>Explore the world of BFSSS</p>
+                    <a href="">Explore in 360</a>
+                </div>
+                <div class="details" id="d5">
+                    <img src="assets/images/BFSSS LOGO .png" alt="bfsss logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="navigatior">
+            <ul>
+                <li class="list active">
+                    <a href="#">
+                        <span class="icon">
+                            <i class='bx bx-home'></i>
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <i class='bx bx-user'></i>
+                        </span>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <i class='bx bx-message-rounded-dots'></i>
+                        </span>
+                        <span class="text">Messages</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <i class='bx bx-camera'></i>
+                        </span>
+                        <span class="text">Camera</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <i class='bx bx-cog'></i>
+                        </span>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

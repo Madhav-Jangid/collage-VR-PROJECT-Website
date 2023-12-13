@@ -1,0 +1,484 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+    height: 100vh;
+}
+
+
+:root{
+    --red: #e31e24;
+    --white: #ffffff;
+    --yellowishWhite: #feffea;
+}
+
+
+/*=============================================
+=            Nav Bar            =
+=============================================*/
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    padding: 10px;
+	background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9990909090;
+}
+
+nav #logo{
+    /* width: 100%; */
+    height: 100%;
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul {
+	padding: 0;
+    margin: 0;
+	list-style: none;
+	position: relative;
+    width: 100%;
+	}
+	
+nav ul li {
+	display:inline-block;
+}
+
+nav a {
+	display:block;
+	padding:0 10px;	
+	color:#000000;
+	font-size:20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+	line-height: 60px;
+	text-decoration:none;
+}
+
+nav a:hover { 
+    text-decoration: 2px underline;
+    text-underline-offset: 10px;
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px; /* the height of the main nav */
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    /* width: auto; */
+	float: none;
+	display:list-item;
+	position: relative;
+}
+
+nav ul ul li:hover a{
+    padding-left: 20px;
+}
+
+nav ul ul li a{
+    transition: all .2s;
+    font-size: 15px;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px; 
+	right:170px;
+    z-index: 9;
+}
+
+.dropMenuOption{
+    background-color: var(--white);
+}
+
+
+.dropMenuOption a:hover{
+    background-color: var(--red);
+    color: var(--white);
+    text-decoration: none;
+}
+
+/*=====  End of Nav Bar  ======*/
+
+
+
+/*=============================================
+=            main container            =
+=============================================*/
+
+.mainCont{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: calc(100% - 6rem);
+    margin: auto;
+    padding: 30px 20px;
+    position: relative;
+    margin-top: 6rem;
+}
+
+.mainCont #bgImage{
+    position: absolute;
+    width: 100%;
+    /* height: 100; */
+    object-fit: cover;
+    z-index: -100;
+    filter: grayscale(.5) blur(1px);
+}
+
+#mainLeftLogo{
+    height: 450px;
+    width: 450px;
+    background-color: #ffffffb4;
+    border: 1px solid var(--red);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+#mainLeftLogo p{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+}
+
+/*=====  End of main container  ======*/
+
+
+
+
+/*=============================================
+=            another collees card            =
+=============================================*/
+
+#anotherCollegesRight{
+    display: flex;
+    height: 20rem;
+    width: 40rem;
+}
+
+.card {
+    height: 95%;
+    color: #000000;
+    width: 70px;
+    border-radius: 30px;
+    margin: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: end;
+    transition: 0.3s all linear;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid var(--red);
+    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    /* box-shadow: 0 0 50px rgba(0, 0, 0,0.9); */
+}
+
+#card1 {
+    width: 80%;
+    background-color: rgba(255, 255, 255, .7);
+    /* background: url('https://imgs.search.brave.com/JrR2JiBIMjpL7zEl9eAcD5h6aE5JrrxFWPg0AZPA8CQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NDY1ODczNDgtZDEy/NjYwYzMwYzUwP2l4/bGliPXJiLTQuMC4z/Jml4aWQ9TTN3eE1q/QTNmREI4TUh4elpX/RnlZMmg4Tm54OGJt/RjBkWEpoYkh4bGJu/d3dmSHd3Zkh4OE1B/PT0mdz0xMDAwJnE9/ODA'); */
+    background-position: center;
+    background-size: cover;
+
+}
+
+#card2 {
+    background-color: rgba(255, 255, 255, .7);
+    /* background: url('https://imgs.search.brave.com/t4ltToFyrmOnrMvV7rxNq4eMuyqMdESOe7LwYbLrl10/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOC8w/MS8xNC8yMy8xMi9u/YXR1cmUtMzA4Mjgz/Ml82NDAuanBn'); */
+    background-position: center;
+    background-size: cover;
+
+}
+
+#card3 {
+    background-color: rgba(255, 255, 255, .7);
+    /* background: url('https://imgs.search.brave.com/xjyai8JcrgIz2M0hxVTMto2i7fneQ8fr_AoZ-tI2qMY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vcGljanVt/Ym8uY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy9iZWF1dGlmdWwt/Zm9nZ3ktYXV0dW1u/LW1vcm5pbmctbmF0/dXJlLXNjZW5lcnkt/ZnJlZS1waG90by5q/cGc_dz02MDAmcXVh/bGl0eT04MA'); */
+    background-position: center;
+    background-size: cover;
+
+}
+
+#card4 {
+    background-color: rgba(255, 255, 255, .7);
+    /* background: url('https://imgs.search.brave.com/uutxfF7S8FW_CjPzphB32FZ3BKOlIbvcSzyS46FWTVI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxMy8x/MC8wMi8yMy8wMy9t/b3VudGFpbnMtMTkw/MDU1XzY0MC5qcGc'); */
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+#card5 {
+    background-color: rgba(255, 255, 255, .7);
+    /* background: url('https://imgs.search.brave.com/eFPPHIk-q_rEeA3WMizmhZXAU6r1l-t51YlVHc5alCw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8w/NS8wNS8wMi8zNy9z/dW5zZXQtMTM3MzE3/MV82NDAuanBn'); */
+    background-position: center;
+    background-size: cover;
+
+}
+
+.num {
+    font-size: 25px;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin: 5.6px;
+    text-align: center;
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: var(--white);
+    color: #000000;
+    cursor: pointer;
+
+
+}
+
+.details {
+    width: calc(100%);
+    height: 6rem;
+    display: none;
+    justify-content: center;
+    align-content: center;
+    border-radius: 10px;
+    opacity: 0.7;
+    color: var(--white);
+    font-size: 14px;
+    padding: 15px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.details img{
+    width: 100%;
+    height: 4rem;
+    border-radius: inherit;
+}
+
+.detailOfCard{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.detailOfCard h2{
+    color: var(--red);
+    font-size: 21px;
+    font-weight: 600;
+    text-decoration: 3px underline;
+    text-underline-offset: 10px;
+    margin-bottom: 15px;
+}
+
+.detailOfCard a{
+    margin: 30px 0;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: var(--red);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.detailOfCard a:hover{
+    background-color: var(--white);
+    color: var(--red);
+    border: 1px solid var(--red);
+}
+
+#d1 {
+    display: block;
+}
+
+.coverDiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.coverDiv h1{
+    color: var(--red);
+    transform: rotate(-90deg);
+}
+
+
+
+/*=====  End of another collees card  ======*/
+
+
+
+/*=============================================
+=            bottom navigator            =
+=============================================*/
+
+.navigatior{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--white);
+    color: #000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* transform: rotate(90deg); */
+}
+
+.navigatior ul{
+    display: flex;
+    width: 350px;
+}
+
+.navigatior ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigatior ul li a{
+    /* transform: rotate(-90deg); */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigatior ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: rgb(5, 5, 5);
+
+}
+
+.navigatior ul li.active a .icon{
+    transform: translateY(-35px);
+}
+
+.navigatior ul li a .text{
+    position: absolute;
+    color: rgb(0, 0, 2);
+    font-weight: 500;
+    font-size: 0.75em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigatior ul li.active a .text{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator{
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: #f7341e;
+    border-radius: 50%;
+    border: 6px solid rgba(64, 62, 62, 0.981);
+    transition: 0.5s;
+
+}
+
+.indicator::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22.5px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 rgba(255, 255, 255, 0);
+}
+
+.indicator::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22.5px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 rgba(255, 255, 255, 0);
+}
+
+
+.navigatior ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(70px * 0));
+}
+.navigatior ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(70px * 1));
+}
+.navigatior ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(70px * 2));
+}
+.navigatior ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(70px * 3));
+}
+.navigatior ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(70px * 4));
+}
+
+/*=====  End of bottom navigator  ======*/
+
+
+@media (max-width:625px) {
+
+    #anotherCollegesRight{
+        display: none;
+    }
+
+    .navigatior{
+        display: flex;
+    }
+}
